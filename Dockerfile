@@ -16,7 +16,8 @@ RUN apt-get update \
     curl \
     iptables \
     iputils-ping \
-    sudo
+    sudo \
+    vim
 
 # install containernet (using its Ansible playbook)
 COPY . /containernet

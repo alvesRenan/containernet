@@ -506,7 +506,8 @@ def fixLimits():
         #Increase number of PTYs for nodes
         sysctlTestAndSet( 'kernel.pty.max', 20000 )
     # pylint: disable=broad-except
-    except Exception:
+    except Exception as e:
+        warn( "*** DEBUG: %s \n" % e)
         warn( "*** Error setting resource limits. "
               "Mininet's performance may be affected.\n" )
     # pylint: enable=broad-except
